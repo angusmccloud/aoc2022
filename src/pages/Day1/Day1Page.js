@@ -17,13 +17,7 @@ const Day1Page = () => {
   useEffect(() => {
     // Solve Task 1
     if (taskNumber === '1' && result1 === '' && inputData.length > 0) {
-      let increasesCount = 0;
-      for(let i = 1; i < inputData.length; i++) {
-        if(inputData[i] > inputData[i-1]) {
-          increasesCount++;
-        }
-      }
-      setResult1(`Number of Depth Increases: ${increasesCount}`);
+      // setResult1(`Number of Depth Increases: ${increasesCount}`);
     }
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [inputData]);
@@ -31,20 +25,14 @@ const Day1Page = () => {
   useEffect(() => {
     // Solve Task 2
     if (taskNumber === '2' && result2 === '' && inputData.length > 0) {
-      let increasesCount = 0;
-      for(let i = 3; i < inputData.length; i++) {
-        if((inputData[i] + inputData[i - 1] + inputData[i - 2]) > (inputData[i-1] + inputData[i-2] + inputData[i-3])) {
-          increasesCount++;
-        }
-      }
-      setResult2(`Number of Summed Depth Increases: ${increasesCount}`);
+      // setResult2(`Number of Summed Depth Increases: ${increasesCount}`);
     }
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [inputData]);
 
   return (
     <div>
-      <Navigation pageName={`Day 1, Task ${taskNumber}`}>
+      <Navigation pageName={`Day 9, Task ${taskNumber}`}>
         {result1 !== '' && (
           <Typography variant='h5'>
             Result 1: {result1}
@@ -64,4 +52,3 @@ const Day1Page = () => {
 }
 
 export default Day1Page;
-
