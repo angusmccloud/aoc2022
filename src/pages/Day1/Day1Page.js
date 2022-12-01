@@ -11,13 +11,25 @@ const Day1Page = () => {
   const { taskNumber } = useParams();
 
   useEffect(() => {
-    setInputData(data.split('\n').map(v => parseInt(v.trim())));
+    setInputData(data.split('\n').map(v => v.trim()));
   }, []);
 
   useEffect(() => {
     // Solve Task 1
     if (taskNumber === '1' && result1 === '' && inputData.length > 0) {
-      // setResult1(`Number of Depth Increases: ${increasesCount}`);
+      let maxElf = 0;
+      let currentElfWeight = 0;
+      inputData.forEach((value, index) => {
+        if(value.length > 0) { 
+          currentElfWeight += parseInt(value);
+          if (currentElfWeight > maxElf) {
+            maxElf = currentElfWeight;
+          }
+        } else {
+          currentElfWeight = 0;
+        }
+      });
+      setResult1(`Heaviest Elf: ${maxElf}`);
     }
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [inputData]);
@@ -25,7 +37,23 @@ const Day1Page = () => {
   useEffect(() => {
     // Solve Task 2
     if (taskNumber === '2' && result2 === '' && inputData.length > 0) {
-      // setResult2(`Number of Summed Depth Increases: ${increasesCount}`);
+      const elves = [];
+      let currentElfWeight = 0;
+      inputData.forEach((value, index) => {
+        if(value.length > 0) { 
+          currentElfWeight += parseInt(value);
+        } else {
+          elves.push(currentElfWeight);
+          currentElfWeight = 0;
+        }
+
+        if(index === inputData.length - 1) {
+          elves.push(currentElfWeight);
+        }
+      });
+      const elvesSorted = elves.sort((a, b) => b - a);    
+      const topThreeElves = elvesSorted[0] + elvesSorted[1] + elvesSorted[2];
+      setResult1(`Top 3 Elves: ${topThreeElves}`);
     }
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [inputData]);
