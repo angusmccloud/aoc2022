@@ -16,3 +16,4 @@ I will be completing them all using ReactJS, with the UI using MUI (v4 still, sa
 Other [Slalom](https://slalom.com) folk joining the fun:
 
 [David Lozzi in React, experimenting with UI libraries](https://github.com/DavidLozzi/AdventOfCode22)
+[Jorge Jiminez in React](https://github.com/jorge-jimenez2021/adventOfCode22)
