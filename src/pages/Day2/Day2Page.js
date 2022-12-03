@@ -79,7 +79,7 @@ const Day2Page = () => {
 
   return (
     <div>
-      <Navigation pageName={`Day 9, Task ${taskNumber}`}>
+      <Navigation pageName={`Day 2, Task ${taskNumber}`}>
         {result1 !== '' && (
           <Typography variant='h5'>
             Result 1: {result1}
