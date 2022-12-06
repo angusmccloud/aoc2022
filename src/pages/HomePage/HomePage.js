@@ -62,7 +62,7 @@ const DatesTable = () => {
   const classes = useStyles();
 
   // Update this row as I do a new day
-  const completedDates = 5;
+  const completedDates = 6;
   let dateRows = [];
   for(let i = 1; i <= completedDates; i++) {
     dateRows.push(
