@@ -147,10 +147,10 @@ const Day9Page = () => {
 
                 if (Math.abs(distX) >= 2) {
                     body[i].x += Math.sign(distX);
-                    if (Math.abs(distY) != 0) body[i].y += Math.sign(distY);
+                    if (Math.abs(distY) !== 0) body[i].y += Math.sign(distY);
                 } else if (Math.abs(distY) >= 2) {
                     body[i].y += Math.sign(distY);
-                    if (Math.abs(distX) != 0) body[i].x += Math.sign(distX);
+                    if (Math.abs(distX) !== 0) body[i].x += Math.sign(distX);
                 }
             }
 
