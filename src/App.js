@@ -19,6 +19,19 @@ import {
   Day10Page,
   Day11Page,
   Day12Page,
+  Day13Page,
+  Day14Page,
+  Day15Page,
+  Day16Page,
+  Day17Page,
+  // Day18Page,
+  // Day19Page,
+  // Day20Page,
+  // Day21Page,
+  // Day22Page,
+  // Day23Page,
+  // Day24Page,
+  // Day25Page,
 } from './pages';
 
 const App = () => {
@@ -65,6 +78,45 @@ const App = () => {
         <Route exact path="/12/:taskNumber">
           <Day12Page />
         </Route>
+        <Route exact path="/13/:taskNumber">
+          <Day13Page />
+        </Route>
+        <Route exact path="/14/:taskNumber">
+          <Day14Page />
+        </Route>
+        <Route exact path="/15/:taskNumber">
+          <Day15Page />
+        </Route>
+        <Route exact path="/16/:taskNumber">
+          <Day16Page />
+        </Route>
+        <Route exact path="/17/:taskNumber">
+          <Day17Page />
+        </Route>
+        {/* <Route exact path="/18/:taskNumber">
+          <Day18Page />
+        </Route>
+        <Route exact path="/19/:taskNumber">
+          <Day19Page />
+        </Route>
+        <Route exact path="/20/:taskNumber">
+          <Day20Page />
+        </Route>
+        <Route exact path="/21/:taskNumber">
+          <Day21Page />
+        </Route>
+        <Route exact path="/22/:taskNumber">
+          <Day22Page />
+        </Route>
+        <Route exact path="/23/:taskNumber">
+          <Day23Page />
+        </Route>
+        <Route exact path="/24/:taskNumber">
+          <Day24Page />
+        </Route>
+        <Route exact path="/25/:taskNumber">
+          <Day25Page />
+        </Route> */}
       </Switch>
     </Router>
   );
